@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      {% if posts|length > 0 %} {{ posts[0].category}} {% else %} Nothing is
+      here {% endif %}
+    </title>
+    <link rel="stylesheet" href="static/css/general.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/queries.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a class="toindex" href="/">
+          <img
+            class="logo"
+            src="static/images/headerimage4.png"
+            alt="Hands holding laptop as if it is a book"
+          />
+        </a>
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-list-link" href="/betterpython">Better Python</a>
+            </li>
+            <li><a class="nav-list-link" href="/blog">Blog</a></li>
+            <li><a class="nav-list-link" href="/books">Books</a></li>
+            <li><a class="nav-list-link" href="/projects">Projects</a></li>
+          </ul>
+        </nav>
+        <button class="btn-mobile-nav nav-menu-btn">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="bars"
+            class="icon-menu"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="#e7e7e7"
+              d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+            ></path>
+          </svg>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="times"
+            class="icon-close"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 352 512"
+          >
+            <path
+              fill="#e7e7e7"
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="latest-posts-section">
+      <div class="latest-posts-all">
+        <h2 class="latest-posts-h2">
+          {% if posts|length > 0 %} {{ posts[0].category}} {% else %} Nothing is
+          here {% endif %}
+        </h2>
+        <div class="latest-posts-container">
+          {% for post in posts %}
+          <a href="/post/{{post['article_id']}}" class="content-link">
+            <div class="post-div">
+              <p class="post-header">{{ post['title'] }}</p>
+              <img
+                class="post-image"
+                src="static/images/article{{post['article_id']}}/{{post['image_name']}}"
+                alt="uno cards, monopoly houses and playing cards which are handdrawing"
+              />
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>

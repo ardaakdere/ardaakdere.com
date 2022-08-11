@@ -1,0 +1,7 @@
+resimlerin 1:2 oranda olup olmadığı kontrol edilecek hepsi.
+
+    div.python pre {
+        font-size: 0.6rem;
+    }
+
+hem landscape hem de telefon çözünürlüğüne uyacak width<--- ona göre kod görüntüsü düzenlenecek

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Post</title>
+    <style>
+      input {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/addpost" method="POST" id = 'formadd' enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Select image</label>
+        <div class="custom-file">
+          <input
+            type="file"
+            class="custom-file-input"
+            name="image"
+            id="image"
+          />
+          <label class="custom-file-label" for="image">Select image...</label>
+        </div>
+        <span>Title:</span><input type="text" name="title" />
+        <span>Category:</span><input type="text" name="category" />
+        <!--<span>Content:</span><input type="textarea" name="content" /> -->
+        <span>Author:</span><input type="text" name="author" />
+      </div>
+      <button type="submit" class="btn btn-primary">Upload</button>
+    </form>
+    <textarea name="content" form="formadd"></textarea>
+  </body>
+</html>

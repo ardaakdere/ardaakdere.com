@@ -1,0 +1,102 @@
+body {
+  color: #dddddd;
+}
+
+/* HEADER */
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 6rem;
+  background-color: #121212;
+}
+
+.toindex {
+  /* same as logo's height */
+  height: 80px;
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.nav-list-link:link,
+.nav-list-link:visited {
+  color: #e7e7e7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-list-link:hover,
+.nav-list-link:active {
+  color: #cfcfcf;
+}
+
+.btn-mobile-nav {
+  height: 35px;
+  width: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-close {
+  display: none;
+}
+
+/* POST SECTION */
+
+.post-section {
+  margin: 3.6rem 0;
+  padding: 0 3.6rem;
+}
+
+.post-title-h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.post-container {
+  margin: 1.2rem 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  margin-top: 2rem;
+  line-height: 1.8rem;
+  /*font-size: 125%;*/
+  font-weight: 300;
+}
+
+/* burdan sonrasına göz atılacak yeniden */
+blockquote {
+  background-color: rgb(34, 60, 78);
+  padding: 10px;
+  overflow-x: auto;
+}
+
+blockquote .content {
+  margin:0;
+}
+
+a {
+    overflow-x: auto;
+}

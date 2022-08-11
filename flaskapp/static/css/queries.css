@@ -1,0 +1,127 @@
+@media (max-width: 74em) {
+  .post-div {
+    padding: 1.8rem 2.4rem;
+  }
+
+  .latest-posts-container {
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 62em) {
+
+  .latest-posts-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 56em) {
+  .nav-container {
+    padding: 0.6rem 3rem;
+  }
+
+  .latest-posts-section {
+    padding: 0 1.8rem;
+  }
+
+  .latest-posts-all {
+    padding: 0 1.2rem;
+  }
+}
+
+@media (max-width: 47em) {
+  .latest-posts-container {
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 38em) {
+  /* NAVBAR MOBILE */
+
+  .toindex {
+    /* same as logo's height */
+    height: 70px;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+  }
+
+  .navbar {
+    background-color: rgb(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*transition: all 0.5s;*/
+
+    /* HIDE IT VISUALLY */
+    opacity: 0;
+
+    /* MAKE IT UNACCESIBLE TO MOUSE AND KEYBOARD */
+    pointer-events: none;
+
+    /* HIDE IT FROM SCREEN READERS */
+    visibility: hidden;
+  }
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  /* NAVBAR OPEN */
+
+  .nav-open .navbar {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-open .icon-close {
+    display: block;
+  }
+
+  .nav-open .icon-menu {
+    display: none;
+  }
+
+  /* NAVBAR VISUALLY */
+
+  .latest-posts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-container {
+    padding: 0.6rem 1.8rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 3.6rem;
+    text-align: center;
+  }
+
+  .nav-list-link:link,
+  .nav-list-link:visited {
+    font-size: 2rem;
+  }
+
+  /* POST PAGE */
+
+  .latest-posts-all {
+    padding: 0 0;
+  }
+
+  .post-section {
+    padding: 0 1.8rem;
+  }
+
+  }
+
